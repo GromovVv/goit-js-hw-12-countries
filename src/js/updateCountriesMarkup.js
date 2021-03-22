@@ -4,12 +4,12 @@ import oneCountry from '../templates/one-country.hbs';
 import { errorFetch, errorQuerySpecific,successQuery, successQueryList } from './notifications';
 
 function updateMarkup(data) {
-  if (data.length === 1) {
+  if (data.length > 1) {
     MarkupOne(data);
     successQuery();
     return;
   }
-  if (data.length > 2 && data.length <= 10) {
+  if (data.length === 1 && data.length <= 10) {
     MarkupList(data);
     successQueryList();
     return;
