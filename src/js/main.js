@@ -11,7 +11,9 @@ refs.input.addEventListener(
     const searchQuery = event.target.value;
     refs.container.innerHTML = '';
     if (searchQuery.trim() !== '') {
-      fetchCountry(searchQuery).then(response => response === undefined ? alert('По данному запросу ничего не найдено') : updateMarkup(resp)).catch(err => console.log(err));
+      fetchCountry(searchQuery)
+      .then(response => response === undefined ? alert('По данному запросу ничего не найдено') : updateMarkup(response))
+      .catch(err => console.log(err));
     }
   }, 500),
 );
