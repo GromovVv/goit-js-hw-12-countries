@@ -4,6 +4,9 @@ import oneCountry from '../templates/one-country.hbs';
 import { errorFetch, errorQuerySpecific,successQuery, successQueryList } from './notifications';
 
 function updateMarkup(data) {
+  // if (data.length === 0) {
+
+  // }
   if (data.length === 1) {
     MarkupOne(data);
     successQuery();

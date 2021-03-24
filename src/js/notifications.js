@@ -1,6 +1,7 @@
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/mobile/dist/PNotifyMobile.css';
 import '@pnotify/core/dist/Angeler.css';
+
 import { defaults } from '@pnotify/core';
 import { error, alert} from '@pnotify/core';
 

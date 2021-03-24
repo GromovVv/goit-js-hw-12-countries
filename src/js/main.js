@@ -1,4 +1,5 @@
 import debounce from 'lodash.debounce';
+
 import refs from './refs';
 import fetchCountry from './fetchCountries';
 import updateMarkup from './updateCountriesMarkup';
@@ -9,6 +10,8 @@ refs.input.addEventListener(
     event.preventDefault();
     const searchQuery = event.target.value;
     refs.container.innerHTML = '';
-    fetchCountry(searchQuery).then(updateMarkup);
+    if (searchQuery.trim() !== '') {
+      fetchCountry(searchQuery).then(response => response === undefined ? alert('По данному запросу ничего не найдено') : updateMarkup(resp)).catch(err => console.log(err));
+    }
   }, 500),
 );
